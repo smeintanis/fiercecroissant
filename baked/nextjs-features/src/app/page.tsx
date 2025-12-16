@@ -33,6 +33,11 @@ export default function Home() {
           description="SSG via generateStaticParams, per-page generateMetadata, and notFound()."
         />
         <FeatureCard
+          title="Import Nmap → Assets"
+          href="/assets"
+          description="Upload Nmap output, parse it server-side, and store assets with open ports."
+        />
+        <FeatureCard
           title="Server Actions"
           href="/dashboard"
           description="Form posts to a server action; state persists in cookies for the demo."

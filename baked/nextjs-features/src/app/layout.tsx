@@ -41,6 +41,9 @@ export default function RootLayout({
                 <Link className="hover:underline" href="/blog">
                   Blog (dynamic routes)
                 </Link>
+                <Link className="hover:underline" href="/assets">
+                  Assets (Nmap import)
+                </Link>
                 <Link className="hover:underline" href="/dashboard">
                   Dashboard (server actions)
                 </Link>
