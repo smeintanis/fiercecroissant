@@ -1,0 +1,116 @@
+# Sample Nmap output (normal -oN style)
+# Generated for demo purposes
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-16 12:00 UTC
+
+Nmap scan report for 10.10.0.1
+Host is up (0.0010s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.9p1 Ubuntu
+80/tcp   open  http    nginx 1.22
+443/tcp  open  https   nginx 1.22
+
+Nmap scan report for 10.10.0.2
+Host is up (0.0011s latency).
+PORT     STATE SERVICE VERSION
+53/udp   open  domain  dnsmasq 2.86
+80/tcp   open  http    Apache httpd 2.4
+
+Nmap scan report for 10.10.0.3
+Host is up (0.0012s latency).
+PORT     STATE SERVICE VERSION
+445/tcp  open  microsoft-ds Samba smbd 4.17
+139/tcp  open  netbios-ssn
+
+Nmap scan report for 10.10.0.4
+Host is up (0.0009s latency).
+PORT     STATE SERVICE VERSION
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+
+Nmap scan report for 10.10.0.5
+Host is up (0.0014s latency).
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 3.0.5
+22/tcp   open  ssh     OpenSSH 8.2p1
+
+Nmap scan report for 10.10.0.6
+Host is up (0.0013s latency).
+PORT     STATE SERVICE VERSION
+3306/tcp open  mysql   MySQL 8.0
+
+Nmap scan report for 10.10.0.7
+Host is up (0.0016s latency).
+PORT     STATE SERVICE VERSION
+5432/tcp open  postgresql PostgreSQL 15
+
+Nmap scan report for 10.10.0.8
+Host is up (0.0010s latency).
+PORT     STATE SERVICE VERSION
+6379/tcp open  redis   Redis key-value store
+
+Nmap scan report for 10.10.0.9
+Host is up (0.0011s latency).
+PORT     STATE SERVICE VERSION
+9200/tcp open  http    Elasticsearch REST API
+
+Nmap scan report for 10.10.0.10
+Host is up (0.0008s latency).
+PORT     STATE SERVICE VERSION
+8080/tcp open  http-proxy
+
+Nmap scan report for 10.10.0.11
+Host is up (0.0015s latency).
+PORT     STATE SERVICE VERSION
+25/tcp   open  smtp    Postfix smtpd
+110/tcp  open  pop3
+
+Nmap scan report for 10.10.0.12
+Host is up (0.0012s latency).
+PORT     STATE SERVICE VERSION
+143/tcp  open  imap
+993/tcp  open  imaps
+
+Nmap scan report for 10.10.0.13
+Host is up (0.0011s latency).
+PORT     STATE SERVICE VERSION
+389/tcp  open  ldap
+636/tcp  open  ldaps
+
+Nmap scan report for 10.10.0.14
+Host is up (0.0010s latency).
+PORT     STATE SERVICE VERSION
+5900/tcp open  vnc
+
+Nmap scan report for 10.10.0.15
+Host is up (0.0017s latency).
+PORT     STATE SERVICE VERSION
+27017/tcp open  mongodb MongoDB
+
+Nmap scan report for 10.10.0.16
+Host is up (0.0014s latency).
+PORT     STATE SERVICE VERSION
+161/udp  open  snmp
+
+Nmap scan report for 10.10.0.17
+Host is up (0.0010s latency).
+PORT     STATE SERVICE VERSION
+1521/tcp open  oracle
+
+Nmap scan report for 10.10.0.18
+Host is up (0.0011s latency).
+PORT     STATE SERVICE VERSION
+8443/tcp open  https-alt
+
+Nmap scan report for 10.10.0.19
+Host is up (0.0013s latency).
+PORT     STATE SERVICE VERSION
+1883/tcp open  mqtt
+
+Nmap scan report for 10.10.0.20
+Host is up (0.0012s latency).
+PORT     STATE SERVICE VERSION
+5985/tcp open  wsman
+5986/tcp open  wsmans
+
+Nmap done: 20 IP addresses (20 hosts up) scanned in 4.12 seconds

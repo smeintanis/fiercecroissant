@@ -1,4 +1,334 @@
 {
-  "updatedAt": null,
-  "assets": []
+  "updatedAt": "2025-12-16T12:05:33.394Z",
+  "assets": [
+    {
+      "key": "10.10.0.1",
+      "target": "10.10.0.1",
+      "address": "10.10.0.1",
+      "ports": [
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 8.9p1 Ubuntu"
+        },
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http",
+          "version": "nginx 1.22"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "https",
+          "version": "nginx 1.22"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.10",
+      "target": "10.10.0.10",
+      "address": "10.10.0.10",
+      "ports": [
+        {
+          "port": 8080,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http-proxy"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.11",
+      "target": "10.10.0.11",
+      "address": "10.10.0.11",
+      "ports": [
+        {
+          "port": 25,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "smtp",
+          "version": "Postfix smtpd"
+        },
+        {
+          "port": 110,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "pop3"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.12",
+      "target": "10.10.0.12",
+      "address": "10.10.0.12",
+      "ports": [
+        {
+          "port": 143,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "imap"
+        },
+        {
+          "port": 993,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "imaps"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.13",
+      "target": "10.10.0.13",
+      "address": "10.10.0.13",
+      "ports": [
+        {
+          "port": 389,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ldap"
+        },
+        {
+          "port": 636,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ldaps"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.14",
+      "target": "10.10.0.14",
+      "address": "10.10.0.14",
+      "ports": [
+        {
+          "port": 5900,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "vnc"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.15",
+      "target": "10.10.0.15",
+      "address": "10.10.0.15",
+      "ports": [
+        {
+          "port": 27017,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "mongodb",
+          "version": "MongoDB"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.16",
+      "target": "10.10.0.16",
+      "address": "10.10.0.16",
+      "ports": [
+        {
+          "port": 161,
+          "protocol": "udp",
+          "state": "open",
+          "service": "snmp"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.17",
+      "target": "10.10.0.17",
+      "address": "10.10.0.17",
+      "ports": [
+        {
+          "port": 1521,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "oracle"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.18",
+      "target": "10.10.0.18",
+      "address": "10.10.0.18",
+      "ports": [
+        {
+          "port": 8443,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "https-alt"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.19",
+      "target": "10.10.0.19",
+      "address": "10.10.0.19",
+      "ports": [
+        {
+          "port": 1883,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "mqtt"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.2",
+      "target": "10.10.0.2",
+      "address": "10.10.0.2",
+      "ports": [
+        {
+          "port": 53,
+          "protocol": "udp",
+          "state": "open",
+          "service": "domain",
+          "version": "dnsmasq 2.86"
+        },
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http",
+          "version": "Apache httpd 2.4"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.20",
+      "target": "10.10.0.20",
+      "address": "10.10.0.20",
+      "ports": [
+        {
+          "port": 5985,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "wsman"
+        },
+        {
+          "port": 5986,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "wsmans"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.3",
+      "target": "10.10.0.3",
+      "address": "10.10.0.3",
+      "ports": [
+        {
+          "port": 139,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "netbios-ssn"
+        },
+        {
+          "port": 445,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "microsoft-ds",
+          "version": "Samba smbd 4.17"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.4",
+      "target": "10.10.0.4",
+      "address": "10.10.0.4",
+      "ports": [
+        {
+          "port": 3389,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ms-wbt-server",
+          "version": "Microsoft Terminal Services"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.5",
+      "target": "10.10.0.5",
+      "address": "10.10.0.5",
+      "ports": [
+        {
+          "port": 21,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ftp",
+          "version": "vsftpd 3.0.5"
+        },
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "version": "OpenSSH 8.2p1"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.6",
+      "target": "10.10.0.6",
+      "address": "10.10.0.6",
+      "ports": [
+        {
+          "port": 3306,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "mysql",
+          "version": "MySQL 8.0"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.7",
+      "target": "10.10.0.7",
+      "address": "10.10.0.7",
+      "ports": [
+        {
+          "port": 5432,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "postgresql",
+          "version": "PostgreSQL 15"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.8",
+      "target": "10.10.0.8",
+      "address": "10.10.0.8",
+      "ports": [
+        {
+          "port": 6379,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "redis",
+          "version": "Redis key-value store"
+        }
+      ]
+    },
+    {
+      "key": "10.10.0.9",
+      "target": "10.10.0.9",
+      "address": "10.10.0.9",
+      "ports": [
+        {
+          "port": 9200,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http",
+          "version": "Elasticsearch REST API"
+        }
+      ]
+    }
+  ]
 }
