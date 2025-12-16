@@ -7,11 +7,11 @@ export default function Home() {
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-2">
           <h1 className="text-3xl font-semibold tracking-tight">
-            Next.js Core Features (App Router)
+            Overview
           </h1>
-          <p className="max-w-2xl text-zinc-700 dark:text-zinc-300">
-            This tiny app is intentionally “feature-first”: each route exists to
-            demonstrate one important Next.js capability.
+          <p className="max-w-2xl text-muted-foreground">
+            Each section demonstrates a core Next.js capability, wrapped in a
+            modern app shell (sidebar, theme toggle, auth pages).
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -69,13 +69,11 @@ export default function Home() {
         />
       </div>
 
-      <div className="rounded-xl border border-black/10 bg-zinc-50 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
-        <p className="font-medium text-zinc-900 dark:text-zinc-50">
-          Tip: middleware is enabled.
-        </p>
+      <div className="rounded-2xl border border-border bg-muted/40 p-5 text-sm text-muted-foreground">
+        <p className="font-medium text-foreground">Tip: demo auth is enabled.</p>
         <p className="mt-1">
-          The middleware sets a cookie the first time you visit; open DevTools →
-          Application → Cookies to see it.
+          Routes in the app shell require a cookie-based demo login. You can
+          inspect cookies in DevTools → Application → Cookies.
         </p>
       </div>
     </div>
@@ -90,15 +88,15 @@ function FeatureCard(props: {
   return (
     <Link
       href={props.href}
-      className="group rounded-xl border border-black/10 bg-white p-5 transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-black dark:hover:bg-white/5"
+      className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition-colors hover:bg-muted/40"
     >
       <div className="flex items-center justify-between gap-4">
         <h2 className="text-base font-semibold tracking-tight">{props.title}</h2>
-        <span className="text-zinc-400 transition-transform group-hover:translate-x-0.5">
+        <span className="text-muted-foreground transition-transform group-hover:translate-x-0.5">
           →
         </span>
       </div>
-      <p className="mt-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+      <p className="mt-2 text-sm leading-6 text-muted-foreground">
         {props.description}
       </p>
     </Link>

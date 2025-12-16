@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { getPost, posts } from "@/app/blog/posts";
+import { getPost, posts } from "../posts";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

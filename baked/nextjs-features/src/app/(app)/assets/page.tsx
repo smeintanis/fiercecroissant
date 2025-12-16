@@ -1,5 +1,5 @@
 import { readAssetsStore } from "@/lib/assets-store";
-import { importNmap, clearAssets } from "@/app/assets/actions";
+import { clearAssets, importNmap } from "./actions";
 
 export const metadata = {
   title: "Assets",
@@ -21,13 +21,13 @@ export default async function AssetsPage({
     <div className="space-y-10">
       <div className="space-y-2">
         <h1 className="text-2xl font-semibold tracking-tight">Assets</h1>
-        <p className="text-sm text-zinc-700 dark:text-zinc-300">
+        <p className="text-sm text-muted-foreground">
           Upload Nmap output and import hosts as assets with open ports.
         </p>
       </div>
 
       {(imported || cleared || error) && (
-        <div className="rounded-xl border border-black/10 bg-zinc-50 p-4 text-sm dark:border-white/10 dark:bg-white/5">
+        <div className="rounded-2xl border border-border bg-muted/40 p-4 text-sm">
           {imported && (
             <p>
               Imported <span className="font-medium">{imported}</span> asset
@@ -39,11 +39,11 @@ export default async function AssetsPage({
         </div>
       )}
 
-      <section className="rounded-xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-black">
+      <section className="rounded-2xl border border-border bg-card p-6 shadow-sm">
         <h2 className="text-base font-semibold tracking-tight">
           Import Nmap output
         </h2>
-        <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">
+        <p className="mt-1 text-sm text-muted-foreground">
           Supported: common “normal” output (<code>-oN</code>) and grepable output
           (<code>-oG</code>). Only <code>open</code> ports are imported.
         </p>
@@ -53,7 +53,7 @@ export default async function AssetsPage({
           className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center"
         >
           <input
-            className="w-full rounded-lg border border-black/10 bg-transparent px-3 py-2 text-sm dark:border-white/10"
+            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm"
             type="file"
             name="nmapFile"
             accept=".txt,.log,.nmap,.gnmap,text/plain"
@@ -65,7 +65,7 @@ export default async function AssetsPage({
         </form>
 
         <form action={clearAssets} className="mt-3">
-          <button className="text-sm underline text-zinc-700 dark:text-zinc-300">
+          <button className="text-sm underline text-muted-foreground">
             Clear all
           </button>
         </form>
@@ -77,7 +77,7 @@ export default async function AssetsPage({
             <h2 className="text-base font-semibold tracking-tight">
               Imported assets
             </h2>
-            <p className="text-sm text-zinc-700 dark:text-zinc-300">
+            <p className="text-sm text-muted-foreground">
               {store.assets.length} asset{store.assets.length === 1 ? "" : "s"}
               {store.updatedAt ? ` • Updated ${new Date(store.updatedAt).toLocaleString()}` : ""}
             </p>
@@ -85,13 +85,13 @@ export default async function AssetsPage({
         </div>
 
         {store.assets.length === 0 ? (
-          <div className="rounded-xl border border-black/10 bg-zinc-50 p-4 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+          <div className="rounded-2xl border border-border bg-muted/40 p-4 text-sm text-muted-foreground">
             No assets yet. Upload an Nmap output file above.
           </div>
         ) : (
-          <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
             <table className="w-full text-left text-sm">
-              <thead className="bg-zinc-50 text-zinc-700 dark:bg-white/5 dark:text-zinc-300">
+              <thead className="bg-muted/40 text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-medium">Asset</th>
                   <th className="px-4 py-3 font-medium">Open ports</th>
@@ -101,12 +101,12 @@ export default async function AssetsPage({
                 {store.assets.map((a) => (
                   <tr
                     key={a.key}
-                    className="border-t border-black/10 align-top dark:border-white/10"
+                    className="border-t border-border align-top"
                   >
                     <td className="px-4 py-3">
                       <div className="font-medium">{a.target}</div>
                       {a.address && (
-                        <div className="text-xs text-zinc-600 dark:text-zinc-400">
+                        <div className="text-xs text-muted-foreground">
                           {a.address}
                         </div>
                       )}
@@ -116,7 +116,7 @@ export default async function AssetsPage({
                         {a.ports.map((p) => (
                           <span
                             key={`${a.key}-${p.port}-${p.protocol}-${p.service ?? ""}`}
-                            className="rounded-full border border-black/10 bg-white px-2 py-1 text-xs dark:border-white/10 dark:bg-black"
+                            className="rounded-full border border-border bg-background px-2 py-1 text-xs"
                             title={p.version ?? ""}
                           >
                             {p.port}/{p.protocol}
